@@ -1,0 +1,25 @@
+{
+  "name": "color-selector",
+  "version": "1.0.0",
+  "description": "The Color Selector lets players customize dashboard colors and view item rarity by color.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthew-willingham/color-selector.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/matthew-willingham/color-selector/issues"
+  },
+  "homepage": "https://github.com/matthew-willingham/color-selector#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
