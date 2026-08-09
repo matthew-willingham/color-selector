@@ -23,9 +23,11 @@ PUT /dashboard/color
 Changes the selected dashboard color.
 
 Request body:
+```
 {
     "color": "purple"
 }
+```
 
 GET /rarity/:rarity
 Returns the color associated with an item rarity.
@@ -34,10 +36,12 @@ Example:
 GET /rarity/rare
 
 Response:
+```
 {
     "rarity": "rare",
     "color": "blue"
 }
+```
 
 ## Testing
 
