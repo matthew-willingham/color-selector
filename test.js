@@ -2,7 +2,7 @@
 /// Date: 08/06/2026
 /// Description: Testing implementation for color-selector microservice
 
-const BASE_URL = "http://localhost:5558";
+const PORT = "http://localhost:5558";
 
 async function runTests() {
 
@@ -13,7 +13,7 @@ async function runTests() {
 
     console.log("TEST 1: GET /colors");
 
-    let response = await fetch(`${BASE_URL}/colors`);
+    let response = await fetch(`${PORT}/colors`);
     let data = await response.json();
 
     console.log("Response:", data);
@@ -33,7 +33,7 @@ async function runTests() {
 
     console.log("TEST 2: GET /dashboard/color");
 
-    response = await fetch(`${BASE_URL}/dashboard/color`);
+    response = await fetch(`${PORT}/dashboard/color`);
     data = await response.json();
 
     console.log("Response:", data);
@@ -52,7 +52,7 @@ async function runTests() {
 
     console.log("TEST 3: PUT /dashboard/color with valid color");
 
-    response = await fetch(`${BASE_URL}/dashboard/color`, {
+    response = await fetch(`${PORT}/dashboard/color`, {
         method: "PUT",
 
         headers: {
@@ -83,7 +83,7 @@ async function runTests() {
 
     console.log("TEST 4: Check that dashboard color was saved");
 
-    response = await fetch(`${BASE_URL}/dashboard/color`);
+    response = await fetch(`${PORT}/dashboard/color`);
     data = await response.json();
 
     console.log("Response:", data);
@@ -102,7 +102,7 @@ async function runTests() {
     
     console.log("TEST 5: PUT /dashboard/color with invalid color");
 
-    response = await fetch(`${BASE_URL}/dashboard/color`, {
+    response = await fetch(`${PORT}/dashboard/color`, {
         method: "PUT",
 
         headers: {
@@ -129,7 +129,7 @@ async function runTests() {
 
     console.log("TEST 6: GET /rarity/rare");
 
-    response = await fetch(`${BASE_URL}/rarity/rare`);
+    response = await fetch(`${PORT}/rarity/rare`);
     data = await response.json();
 
     console.log("Response:", data);
@@ -149,7 +149,7 @@ async function runTests() {
 
     console.log("TEST 7: GET /rarity/legendary");
 
-    response = await fetch(`${BASE_URL}/rarity/legendary`);
+    response = await fetch(`${PORT}/rarity/legendary`);
     data = await response.json();
 
     console.log("Response:", data);
@@ -169,7 +169,7 @@ async function runTests() {
 
     console.log("TEST 8: Unknown rarity uses default color");
 
-    response = await fetch(`${BASE_URL}/rarity/unknown`);
+    response = await fetch(`${PORT}/rarity/unknown`);
     data = await response.json();
 
     console.log("Response:", data);
@@ -185,6 +185,5 @@ async function runTests() {
 
     console.log("Testing complete.");
 }
-
 
 runTests();
