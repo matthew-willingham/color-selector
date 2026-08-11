@@ -29,7 +29,7 @@ const rarityColors = {
     common: "gray",
     uncommon: "green",
     rare: "blue",
-    epic: "purple",
+    very_rare: "purple",
     legendary: "orange"
 };
 
